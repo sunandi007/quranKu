@@ -1,0 +1,15 @@
+.text-right {
+  text-align: right;
+}
+.date-time {
+  font-family: IsepMisbah, serif;
+  font-size: 14px;
+}
+.city {
+  font-family: IsepMisbah, serif;
+  font-size: 18px;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}

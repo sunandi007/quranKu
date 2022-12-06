@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {KurankuRepository} from "../_repository/kuranku.repository";
+import {SurahModel} from "../_model/surah.model";
 
 @Component({
   selector: 'app-surah',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SurahComponent implements OnInit {
 
-  constructor() { }
+  constructor(private repository: KurankuRepository) { }
 
   ngOnInit(): void {
+  }
+
+  get surah(): SurahModel[] {
+    return this.repository.getAllSurah()
   }
 
 }

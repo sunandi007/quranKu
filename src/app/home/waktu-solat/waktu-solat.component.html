@@ -1,0 +1,103 @@
+<ion-header [translucent]="true" collapse="fade" class="h-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="font">Waktu Sholat</ion-title>
+  </ion-toolbar>
+  <!--  <ion-toolbar>-->
+  <!--    <img-->
+  <!--      src="https://static.vecteezy.com/system/resources/thumbnails/002/013/701/small/ramadan-kareem-template-with-3d-realistic-quran-free-vector.jpg"-->
+  <!--      alt="banner">-->
+  <!--    <ion-title>-->
+  <!--      Kuran Ku-->
+  <!--    </ion-title>-->
+  <!--  </ion-toolbar>-->
+</ion-header>
+
+<ion-content class="h-container ion-padding" color="light">
+
+  <ion-searchbar placeholder="Cari Nama Kota" [debounce]="1000" (ionChange)="getCityOnChange($event)"></ion-searchbar>
+
+  <ion-list *ngIf="!jadwalSholat" [inset]="true">
+    <ion-item *ngFor="let result of results" (click)="timePray(result.id)">
+      <ion-label>{{ result.lokasi }}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-item *ngIf="jadwalSholat" class="ion-padding">
+    <div class="flex-col">
+      <ion-label class="city">{{jadwalSholat.data.daerah}}</ion-label>
+      <ion-label class="date-time">{{jadwalSholat.data.jadwal.tanggal}}</ion-label>
+    </div>
+  </ion-item>
+
+  <ion-list *ngIf="jadwalSholat" [inset]="true">
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Subuh</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.subuh}}</ion-label>
+    </ion-item>
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Terbit</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.terbit}}</ion-label>
+    </ion-item>
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Dhuha</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.dhuha}}</ion-label>
+    </ion-item>
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Dzuhur</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.dzuhur}}</ion-label>
+    </ion-item>
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Ashar</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.ashar}}</ion-label>
+    </ion-item>
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Maghrib</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.maghrib}}</ion-label>
+    </ion-item>
+    <ion-item color="gray-light" class="ion-justify-content-between">
+      <ion-label>Isya</ion-label>
+      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.isya}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!--  <ion-list>-->
+  <!--    <ion-item>-->
+  <!--      <ion-searchbar showCancelButton="focus" class="custom"></ion-searchbar>-->
+
+  <!--      <ion-select placeholder="Pilih Kota" [(ngModel)]="selectedCity" (ngModelChange)="timePray(selectedCity)">-->
+  <!--        <ion-select-option *ngFor="let item of city" [value]="item.id">{{item.lokasi}}</ion-select-option>-->
+  <!--      </ion-select>-->
+  <!--    </ion-item>-->
+  <!--  </ion-list>-->
+
+  <!--  <ion-card>-->
+  <!--    <ion-card-content>-->
+  <!--      <p>{{myCity | json}}</p>-->
+  <!--    </ion-card-content>-->
+  <!--  </ion-card>-->
+  <!--  <ion-card>-->
+  <!--    <ion-card-content>-->
+  <!--      <p>{{myCity.jadwal.dzuhur}}</p>-->
+  <!--    </ion-card-content>-->
+  <!--  </ion-card>-->
+  <!--  <ion-card>-->
+  <!--    <ion-card-content>-->
+  <!--      <p>{{myCity.jadwal.ashar}}</p>-->
+  <!--    </ion-card-content>-->
+  <!--  </ion-card>-->
+  <!--  <ion-card>-->
+  <!--    <ion-card-content>-->
+  <!--      <p>{{myCity.jadwal.maghrib}}</p>-->
+  <!--    </ion-card-content>-->
+  <!--  </ion-card>-->
+  <!--  <ion-card>-->
+  <!--    <ion-card-content>-->
+  <!--      <p>{{myCity.jadwal.isya}}</p>-->
+  <!--    </ion-card-content>-->
+  <!--  </ion-card>-->
+</ion-content>
+
+

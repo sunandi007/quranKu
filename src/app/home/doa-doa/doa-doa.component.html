@@ -1,0 +1,40 @@
+<ion-header [translucent]="true" collapse="fade" class="h-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="font">Kumpulan Doa Doa</ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <img
+      src="https://static.vecteezy.com/system/resources/thumbnails/002/013/701/small/ramadan-kareem-template-with-3d-realistic-quran-free-vector.jpg"
+      alt="banner">
+    <!--    <ion-title>-->
+    <!--      Kuran Ku-->
+    <!--    </ion-title>-->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="h-container ion-padding" color="light">
+  <ion-grid>
+    <ng-container>
+      <ion-grid>
+        <ion-row  *ngFor="let item of categoryDoa">
+          <ion-col>
+            <ion-card (click)="convertToSlug(item)">
+              <ion-card-header>
+<!--                <ion-card-title>{{item}}</ion-card-title>-->
+                <ion-card-subtitle>{{item}}</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                Here's a small text description.
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ng-container>
+  </ion-grid>
+</ion-content>
+
+

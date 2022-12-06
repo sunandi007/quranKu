@@ -1,0 +1,37 @@
+<ion-header [translucent]="true" collapse="fade" class="h-header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="font">Tasbih</ion-title>
+  </ion-toolbar>
+  <!--  <ion-toolbar>-->
+  <!--    <img-->
+  <!--      src="https://static.vecteezy.com/system/resources/thumbnails/002/013/701/small/ramadan-kareem-template-with-3d-realistic-quran-free-vector.jpg"-->
+  <!--      alt="banner">-->
+  <!--    <ion-title>-->
+  <!--      Kuran Ku-->
+  <!--    </ion-title>-->
+  <!--  </ion-toolbar>-->
+</ion-header>
+
+<ion-content class="h-container ion-padding" color="light">
+
+  <ion-item class="ion-padding">
+      <ion-label class="text-center">{{countNumber}}</ion-label>
+  </ion-item>
+
+<ion-fab vertical="center" horizontal="center">
+  <ion-fab-button (click)="addCount()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button (click)="countNumber = 0" color="danger">
+    <ion-icon name="refresh-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+
+</ion-content>

@@ -1,27 +1,132 @@
-#container {
+.w-img {
+  width: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+ion-card {
+  font-family: IsepMisbah, serif;
+  font-weight: bold;
+  color: black;
   text-align: center;
+}
+ion-content.background{
+  /* The image used */
+background-color: white;
+  ///* Add the blur effect */
+  //filter: blur(8px);
+  //-webkit-filter: blur(8px);
 
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ion-card-content.p-2 {
+  padding: 5px;
+  border: 1px solid #0e670e;
+  border-radius: 4px;
+}
+ion-card.m-0 {
+  width: fit-content;
+  margin: 2px auto;
+}
+ion-label.m-0 {
+  width: fit-content;
+  margin: 2px auto;
+}
+ion-col.h-fit {
+  height: 4rem;
+  align-items: center;
+}
+ion-col.h-fit-text {
+  height: 2rem;
+  align-items: center;
+}
+.text-menu {
+  font-family: IsepMisbah, serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 11px;
+  color: black;
+}
+.sub-text-time-pray {
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  color: #e8e8e8;
+}
+.container-menu {
+  height: 8.5rem;
+  background: rgb(255,248,213);
+  background: linear-gradient(90deg, rgba(255,248,213,1) 35%, rgba(185,158,24,1) 84%);
+  border-radius: 6px;
+  position: relative;
+  top: -3rem;
+}
+
+ion-label.time-pray {
+  background-color: #1b690b;
+  padding: 2px 7px;
+  border-radius: 6px;
+  border: 1px solid white;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  display: flex;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 4px;
+  left: 8px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.absolute-center {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 33%;
+  left: 36%;
+  top: 68px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.text-city {
+  font-family: IsepMisbah, serif;
+  text-align: left;
+  font-weight: normal;
+  font-size: 17px;
+  text-space: 2px;
+  color: white;
+  margin-left: 3px;
 }
 
-#container a {
-  text-decoration: none;
+.text-date {
+  font-family: IsepMisbah, serif;
+  text-shadow: 1px 1px #1e1e1e;
+  text-align: left;
+  font-weight: normal;
+  font-size: 14px;
+  text-space: 2px;
+  color: white;
+}
+.loc-icon {
+  margin-top: 4px;
+  height: 15px
+}
+.text-pray {
+  font-family: IsepMisbah, serif;
+  text-shadow: 1px 1px #1e1e1e;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  text-space: 3px;
+  color: white;
+}
+.darken-img {
+  filter: brightness(95%);
 }

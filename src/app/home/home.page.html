@@ -1,20 +1,124 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content class="background">
+  <div class="relative">
+    <ion-img class="darken-img"
+      src="assets/icon/banner-home.png"
+      alt="banner"></ion-img>
+    <div class="ion-justify-content-start ion-align-items-center absolute">
+      <ion-icon class="loc-icon" name="location-sharp"></ion-icon>
+      <p class="text-city">Jakarta</p>
+    </div>
+    <div class="absolute-center">
+      <p class="text-date ion-text-center">9 Jumadil Awal 1444</p>
+      <p class="text-pray ion-text-center">Ashar</p>
+      <p class="text-date ion-text-center">02 jam 09 menit</p>
+    </div>
   </div>
+  <ion-grid class="ion-padding">
+    <div class="container-menu">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center text-menu">
+              <ion-label>Subuh</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center text-menu">
+              <ion-label>Zuhur</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center text-menu">
+              <ion-label>Ashar</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center text-menu">
+              <ion-label>Magrib</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center text-menu">
+              <ion-label>Isya'</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="ion-text-center sub-text-time-pray">
+              <ion-label class="time-pray">04.05</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center sub-text-time-pray">
+              <ion-label class="time-pray">11.45</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center sub-text-time-pray">
+              <ion-label class="time-pray">15.10</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center sub-text-time-pray">
+              <ion-label class="time-pray">17.59</ion-label>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div class="ion-text-center sub-text-time-pray">
+              <ion-label class="time-pray">19.13</ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <hr>
+      <ion-row class="ion-justify-content-center">
+        <ion-col class="h-fit">
+          <ion-card class="m-0" color="gray-light" [routerLink]="['/surah']">
+            <ion-card-content class="p-2">
+              <ion-img class="w-img" src="assets/icon/qurans.png"></ion-img>
+            </ion-card-content>
+          </ion-card>
+          <div class="ion-text-center text-menu">
+            <ion-label>Al-quran</ion-label>
+          </div>
+        </ion-col>
+
+        <ion-col class="h-fit">
+          <ion-card class="m-0" color="gray-light" [routerLink]="['/waktu-solat']">
+            <ion-card-content class="p-2">
+              <ion-img class="w-img" src="assets/icon/waktu-sholat.png"></ion-img>
+            </ion-card-content>
+          </ion-card>
+          <div class="ion-text-center text-menu">
+            <ion-label>Waktu Sholat</ion-label>
+          </div>
+        </ion-col>
+
+        <ion-col class="h-fit">
+          <ion-card class="m-0" color="gray-light" [routerLink]="['/doa']">
+            <ion-card-content class="p-2">
+              <ion-img class="w-img" src="assets/icon/doa-muslim.png"></ion-img>
+            </ion-card-content>
+          </ion-card>
+          <div class="ion-text-center text-menu">
+            <ion-label>Doa-Doa</ion-label>
+          </div>
+        </ion-col>
+
+        <ion-col class="h-fit">
+          <ion-card class="m-0" color="gray-light" [routerLink]="['/tasbih']">
+            <ion-card-content class="p-2">
+              <ion-img class="w-img" src="assets/icon/tasbih.png"></ion-img>
+            </ion-card-content>
+          </ion-card>
+          <div class="ion-text-center text-menu">
+            <ion-label>Tasbih</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+
+    </div>
+  </ion-grid>
+
 </ion-content>

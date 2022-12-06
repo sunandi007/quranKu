@@ -1,0 +1,10 @@
+.text-center {
+  text-align: center;
+  font-family: IsepMisbah, serif;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: rgba(89, 238, 120, 0.5);
+  padding: 3rem 5rem;
+  border-radius: 100%;
+  margin: auto 3rem;
+}
