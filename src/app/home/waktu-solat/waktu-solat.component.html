@@ -19,49 +19,50 @@
 
   <ion-searchbar placeholder="Cari Nama Kota" [debounce]="1000" (ionChange)="getCityOnChange($event)"></ion-searchbar>
 
-  <ion-list *ngIf="!jadwalSholat" [inset]="true">
-    <ion-item *ngFor="let result of results" (click)="timePray(result.id)">
+  <ion-list lines="inset" class="floating" [inset]="true" *ngIf="isSelectedCity">
+    <ion-item color="medium" *ngFor="let result of results" (click)="timePray(result.id)">
       <ion-label>{{ result.lokasi }}</ion-label>
     </ion-item>
   </ion-list>
 
-  <ion-item *ngIf="jadwalSholat" class="ion-padding">
-    <div class="flex-col">
-      <ion-label class="city">{{jadwalSholat.data.daerah}}</ion-label>
-      <ion-label class="date-time">{{jadwalSholat.data.jadwal.tanggal}}</ion-label>
-    </div>
-  </ion-item>
-
-  <ion-list *ngIf="jadwalSholat" [inset]="true">
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Subuh</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.subuh}}</ion-label>
-    </ion-item>
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Terbit</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.terbit}}</ion-label>
-    </ion-item>
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Dhuha</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.dhuha}}</ion-label>
-    </ion-item>
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Dzuhur</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.dzuhur}}</ion-label>
-    </ion-item>
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Ashar</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.ashar}}</ion-label>
-    </ion-item>
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Maghrib</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.maghrib}}</ion-label>
-    </ion-item>
-    <ion-item color="gray-light" class="ion-justify-content-between">
-      <ion-label>Isya</ion-label>
-      <ion-label class="text-right">{{ jadwalSholat.data.jadwal.isya}}</ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-card class="bg-card-list" *ngIf="jadwalSholat">
+    <ion-card-header>
+      <ion-card-title class="city">{{jadwalSholat.data.daerah}}</ion-card-title>
+      <ion-card-subtitle class="date-time">{{jadwalSholat.data.jadwal.tanggal}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Subuh</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.subuh}}</ion-label>
+        </ion-item>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Terbit</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.terbit}}</ion-label>
+        </ion-item>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Dhuha</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.dhuha}}</ion-label>
+        </ion-item>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Dzuhur</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.dzuhur}}</ion-label>
+        </ion-item>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Ashar</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.ashar}}</ion-label>
+        </ion-item>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Maghrib</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.maghrib}}</ion-label>
+        </ion-item>
+        <ion-item color="light" class="ion-justify-content-between">
+          <ion-label>Isya</ion-label>
+          <ion-label class="text-right">{{ jadwalSholat.data.jadwal.isya}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
   <!--  <ion-list>-->
   <!--    <ion-item>-->

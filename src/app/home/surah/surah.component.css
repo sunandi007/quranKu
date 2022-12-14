@@ -8,12 +8,10 @@
 .font-sub-surah {
   font-family: IsepMisbah, serif;
   font-size: 11px;
-  color: #bdbaba;
 }
 .font-number-surah {
   font-family: IsepMisbah, serif;
   font-size: 25px;
-  color: white;
 }
 .h-container {
   height: calc(100vh - 25vh)

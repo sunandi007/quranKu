@@ -117,8 +117,12 @@
           </div>
         </ion-col>
       </ion-row>
-
     </div>
   </ion-grid>
+
+  <ion-item class="ion-padding">
+    <ion-label>Ubah Theme</ion-label>
+    <ion-toggle slot="end" (ionChange)="onToggleTheme($event)"></ion-toggle>
+  </ion-item>
 
 </ion-content>

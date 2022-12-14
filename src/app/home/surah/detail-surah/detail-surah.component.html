@@ -46,12 +46,12 @@
         <ng-container *ngIf="modeList else modeAll">
           <ion-card *ngFor="let ayat of dataDetailSurah.ayat">
             <ion-card-header>
-              <p class="font-surah">QS. {{ayat.surah}} : {{ayat.nomor}}</p>
+              <ion-card-subtitle class="font-surah">QS. {{ayat.surah}} : {{ayat.nomor}}</ion-card-subtitle>
             </ion-card-header>
 
             <ion-card-content>
-              <p class="font-ayat">{{ayat.ar}}</p>
-              <p class="font-surah">{{ayat.idn}}</p>
+              <ion-card-title class="font-ayat">{{ayat.ar}}</ion-card-title>
+              <ion-card-subtitle class="font-surah">{{ayat.idn}}</ion-card-subtitle>
             </ion-card-content>
           </ion-card>
         </ng-container>
@@ -65,7 +65,7 @@
           </audio>
         </ion-card>
         <ion-card class="ion-padding">
-          <p class="font-ayat" *ngFor="let ayat of dataDetailSurah.ayat">{{ayat.ar}} {{ayat.nomor | anp}}</p>
+          <ion-card-title class="font-ayat" *ngFor="let ayat of dataDetailSurah.ayat">{{ayat.ar}} {{ayat.nomor | anp}}</ion-card-title>
         </ion-card>
       </ng-template>
     </ion-content>
