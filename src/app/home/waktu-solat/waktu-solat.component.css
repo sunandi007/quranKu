@@ -6,7 +6,7 @@
   font-size: 14px;
 }
 .city {
-  font-family: IsepMisbah, serif;
+  font-family: fantasy, serif;
   font-size: 18px;
 }
 .flex-col {
@@ -24,6 +24,45 @@
 }
 
 .bg-card-list {
+  border-radius: 10px;
+  margin: 0 0 10px 0;
   background: rgb(255,248,213);
-  background: linear-gradient(90deg, rgba(255,248,213,1) 35%, rgba(185,158,24,1) 84%);
+  background: linear-gradient(90deg, rgba(255,248,213,1) 35%, rgb(255, 234, 143) 84%);
+}
+.relative {
+  position: relative;
+  margin-bottom: 10px;
+}
+.absolute {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 16px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.text-time {
+  color: white;
+  font-size: 20px;
+  text-shadow: 1px 1px #1e1e1e;
+  font-family: fantasy, serif;
+  letter-spacing: 0.5px;
+}
+.text-dzuhur {
+  color: black;
+  font-size: 20px;
+  text-shadow: 1px 1px #aba9a9;
+  font-family: fantasy, serif;
+  letter-spacing: 0.5px;
+}
+
+.rounded {
+  border-radius: 8px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  padding: 0 10px;
 }

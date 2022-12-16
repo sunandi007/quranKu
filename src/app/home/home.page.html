@@ -1,12 +1,19 @@
-<ion-content class="background">
+<ion-content>
   <div class="relative">
     <ion-img class="darken-img"
       src="assets/icon/banner-home.png"
       alt="banner"></ion-img>
     <div class="ion-justify-content-start ion-align-items-center absolute">
-      <ion-icon class="loc-icon" name="location-sharp"></ion-icon>
+      <ion-icon class="loc-icon" color="light" name="location-sharp"></ion-icon>
       <p class="text-city">Jakarta</p>
     </div>
+
+    <ion-button *ngIf="!isDark" (click)="onSwitchTheme(true)" class="absolute-button" fill="clear" size="default">
+      <ion-icon slot="icon-only" color="light" name="moon-outline"></ion-icon>
+    </ion-button>
+    <ion-button *ngIf="isDark" (click)="onSwitchTheme(false)" class="absolute-button" fill="clear" size="default">
+      <ion-icon slot="icon-only" color="light" name="sunny-outline"></ion-icon>
+    </ion-button>
     <div class="absolute-center">
       <p class="text-date ion-text-center">9 Jumadil Awal 1444</p>
       <p class="text-pray ion-text-center">Ashar</p>
@@ -120,9 +127,34 @@
     </div>
   </ion-grid>
 
-  <ion-item class="ion-padding">
-    <ion-label>Ubah Theme</ion-label>
-    <ion-toggle slot="end" (ionChange)="onToggleTheme($event)"></ion-toggle>
-  </ion-item>
+  <ion-card class="relative">
+    <img alt="Silhouette of mountains" src="assets/icon/back-asma-new.png" />
+    <ion-card-header class="absolute-center-asma">
+      <ion-card-title class="name-arab">{{nameArab}}</ion-card-title>
+      <p class="name-latin">{{nameLatin}}</p>
+      <p class="name-arti">{{nameArti}}</p>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card class="ion-padding">
+    <ion-card-header>
+      <ion-card-subtitle>Kuran Ku</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      "Sampaikanlah dariku walau hanya satu ayat" - Nabi Muhammad (saw)
+    </ion-card-content>
+
+    <ion-button fill="clear" size="small" class="capitalize">
+      <ion-icon slot="start" name="share-social-outline"></ion-icon>
+      Bagikan Kuran Ku</ion-button>
+  </ion-card>
+
+<!--  <ion-item class="ion-padding">-->
+<!--    <ion-label>Ubah Theme</ion-label>-->
+<!--    <ion-toggle slot="end" (ionChange)="onToggleTheme($event)">-->
+<!--      <ion-icon name="moon-outline"></ion-icon>-->
+<!--    </ion-toggle>-->
+<!--  </ion-item>-->
 
 </ion-content>

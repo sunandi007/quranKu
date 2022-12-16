@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'https://equran.id',
-  apiUrlWaktuSholat: 'https://api.myquran.com'
+  apiUrlWaktuSholat: 'https://api.myquran.com',
+  apiUrlAsmaulHusna: 'http://api.aladhan.com'
 };
 
 /*

@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {AfterContentInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DetailQuranRepository} from "../../_repository/detail-quran.repository";
 import {SurahModel} from "../../_model/surah.model";
 import { ActivatedRoute } from '@angular/router';
@@ -11,6 +11,7 @@ import { data } from 'autoprefixer';
 })
 export class DetailSurahComponent implements OnInit {
   @ViewChild('audio') audioPlayerRef!: ElementRef;
+  @ViewChild('ayat') ayat!: ElementRef;
 
   numberOfSurah: number = 0
   dataDetailSurah = {} as SurahModel
@@ -20,6 +21,8 @@ export class DetailSurahComponent implements OnInit {
   isTafsir: boolean = false
   toggle: any
   prefersDark: any
+
+  fontSize: number = 30
 
   constructor(private repository: DetailQuranRepository,
               private route: ActivatedRoute) {
@@ -31,6 +34,12 @@ export class DetailSurahComponent implements OnInit {
     this.detailSurah()
     this.detailTafsir()
   }
+
+  // ngAfterContentInit() {
+  //   this.ayat.nativeElement.then((res: any) => {
+  //     this.fontSize = res
+  //   })
+  // }
 
   detailSurah() {
     this.repository.getDetailSurah(this.numberOfSurah).subscribe(data => {
@@ -46,5 +55,9 @@ export class DetailSurahComponent implements OnInit {
 
   play() {
     this.audioPlayerRef.nativeElement.play();
+  }
+
+  onIonChange(event: any) {
+    // (this.ayat.nativeElement as HTMLParagraphElement).style.fontSize = `${event.detail.value}px`;
   }
 }
